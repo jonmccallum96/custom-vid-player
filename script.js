@@ -3,19 +3,27 @@ const playBtn = document.getElementById('play');
 const stopBtn = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
+const container = document.getElementById('container');
+const body = document.querySelector('body');
 
 
 //ONPLAY
 
-function playVideo(video) {
-  video.play();
-  video.style.height = '100vh';
+function playVideo(vid) {
+  vid.play();
+  container.style.height = '80%';
+  body.style.backgroundColor = '#222'
+}
+
+//ONPAUSE
+function pauseVideo(vid) {
+  vid.pause();
 }
 
 
 //TOGGLE VIDEO PLAY / PAUSE
 function toggleVideo() {
-  video.paused ? playVideo(video) : video.pause();
+  video.paused ? playVideo(video) : pauseVideo(video);
   togglePlayIcon();
 }
 
@@ -55,7 +63,9 @@ function setVideoTime() {
 //STOP PLAYBACK
 function stopVideo() {
   video.currentTime = 0;
-  video.pause();
+  pauseVideo(video);
+  container.style.height = '40%';
+  body.style.backgroundColor = '#666'
 }
 
 

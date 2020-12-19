@@ -6,20 +6,31 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #666;
-
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   max-height: 100vh;
   margin: 0;
+  transition: 2s;
 }
 
 .video__container {
-  width: 100vw;
-  height: 100vh;
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  transition: 1s;
+  height: 100%;
+}
+
+.video__wrapper {
+  height: 50vh;
+  display: flex;
   justify-content: center;
+  transition: 1s;
 }
 
 h1 {
@@ -27,7 +38,7 @@ h1 {
 }
 
 .video__screen {
-  width: 60%;
+  height: 100%;
   cursor: pointer;
   background-color: black !important;
   border-top-left-radius: 5px;
@@ -43,7 +54,8 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 60%;
+  width: 100%;
+  position: relative;
 }
 
 .controls .btn {
