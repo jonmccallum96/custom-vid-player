@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #666;
+
+  max-height: 100vh;
+  margin: 0;
+}
+
+.video__container {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+}
+
+.video__screen {
+  width: 60%;
+  cursor: pointer;
+  background-color: black !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.controls {
+  background-color: #333;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 60%;
+}
+
+.controls .btn {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+.controls .timestamp {
+  color: white;
+  font-weight: 200;
+  margin-left: 10px;
+}
+
+.controls .fa-play {
+  color: #0ca32f;
+}
+
+.controls .fa-stop {
+  color: #a30c0c;
+}
+
+.controls .fa-pause {
+  color: #f0f0f0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  .video__screen,
+  .controls {
+    width: 95%;
+  }
+}
